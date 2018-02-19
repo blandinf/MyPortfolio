@@ -1,0 +1,1 @@
+<?php echo json_encode(array("PHP","HTML","CSS","SQL","JS","C#","JAVA",".NET"));

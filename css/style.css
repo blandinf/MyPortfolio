@@ -1,0 +1,562 @@
+body{
+	margin: 0;
+	width: 100%;
+}
+
+body.resize{
+	position :absolute;
+	left: 250px;
+	transition: .8s;
+}
+
+.sidebar{
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background: #262626;
+	width: 250px;
+	height: 100%;
+	transition: .3s;
+	z-index: 1;
+}
+
+.active{
+	left: 0;
+}
+
+.sidebar ul{
+	margin: 0;
+	padding: 20px 0;
+}
+
+.sidebar ul li{
+	list-style: none;
+}
+
+.sidebar ul li a{
+	padding: 10px 20px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.sidebarButton{
+	position: absolute;
+	top:0;
+	right: -50px;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.sidebarButton.toggle span{
+	background: transparent;
+}
+
+.sidebarButton.toggle span:before{
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.sidebarButton.toggle span:after{
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+.sidebarButton span{
+	display: block;
+	width: 30px;
+	height: 3.5px;
+	background: chocolate;
+	position: absolute;
+	top: 24px;
+	transition: .2s;
+}
+
+.sidebarButton span:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 3.5px;
+	background: chocolate;
+	transition: .6s;
+}
+
+.sidebarButton span:after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	height: 3.5px;
+	background: chocolate;
+	transition: .6s;
+}
+
+
+
+.progress_bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 5px;
+	background-color: chocolate;
+	z-index: 5000;
+	transition: .1s width ease;
+}
+
+.sidebarButton .circle{
+	z-index: -1;
+	color: chocolate;
+	position: absolute;
+	position: fixed;
+	top: 1px;
+	left: 0;
+	font-size: 3.7em;
+}
+
+
+.presentation{
+	background-image:url("../image/501396.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 118vh;
+	margin-top: -100px;
+}
+
+p.firstname{
+	font-size: 80px;
+}
+
+#search{
+	width: 50%;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+/*	z-index: 1;
+*/	text-align: center;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	font-size: 24px;
+	border-radius: 20px;
+	opacity: 0.8;
+	font-variant: small-caps;
+
+}
+
+#search-icon{
+	position: absolute;
+	top: 51%;
+	left: 73%;
+	transform: translate(-51%,-73%);
+	z-index: 1;
+	font-size: 2em;
+	opacity: 0.8;
+	cursor: pointer;
+	color: #353535;
+}
+
+.project{
+	height: 400px;
+	width: 100%;
+	display: inline-block;
+}
+
+#works-section a{
+	display: inline-block;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#works-section a span{
+	position: absolute; 
+	top: 40px; left: 40px;
+	color: white;
+	display: none;
+}
+
+#works-section a:hover span{
+	display: inline-block;
+}
+
+#works-section span.title{
+	top: 130px;
+	font-weight: bold;
+	font-size: 25px;
+	z-index: 2;
+}
+
+#works-section span.descr{
+	top: 160px;
+	font-size: 18px;
+	z-index: 2;
+}
+
+#works-section span.bg{
+	top:0px; 
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	background: #000;
+}
+
+#education-section {
+	display:block;
+	margin:0 auto;
+	width:100%;
+	background-color:#171717;
+	color:white;
+	text-align: center;
+	padding-top:50px;
+	padding-bottom:150px;
+}
+
+#education-section h3 {
+	font-size: 20px;
+}
+
+#education-section p{
+	margin-left: 200px;
+    margin-right: 200px;
+}
+
+#skills-section{
+	margin:0 auto;
+	width:100%;
+/*	background-color: black;
+*/	color:white;
+	/*min-height:400px;*/
+	text-align: center;
+	margin-bottom: 120px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#about-section{
+	display:table;
+	margin:0 auto;
+	width:100%;
+	color:white;
+	text-align: center;
+	margin-bottom: 80px;
+	background-image:url("../image/pattern7.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 100px;
+	padding-top: 180px;
+	margin-bottom: -20px;
+	background-attachment: fixed;
+
+}
+
+#references-section{
+	display:block;
+	margin:0 auto;
+	width:100%;
+	background-color: #f2f2f2;
+	color:white;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+#work-experiences-section {
+	display:block;
+	margin:0 auto;
+	width:100%;
+	background-color:#171717;
+	color:white;
+	text-align: center;
+	padding-top:80px;
+	padding-bottom:150px;
+}
+
+#work-experiences-section p{
+	margin-left: 200px;
+    margin-right: 200px;
+}
+
+#works-section h1{
+	text-align: center;
+	color: #171717;
+	font-size: 32px;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 120px;
+}
+
+#education-section h1 {
+	text-align: center;
+	color: white;
+	font-size: 32px;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+#work-experiences-section h1 {
+	text-align: center;
+	color: white;
+	font-size: 32px;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+#skills-section h1 {
+	text-align: center;
+	color: chocolate;
+	font-size: 32px;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+#about-section h1 {
+	text-align: center;
+	color: #171717;
+	font-size: 32px;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+
+#references-section h1 {
+	text-align: center;
+	color: #171717;
+	font-size: 32px;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 800;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+#skills-section p {
+	color: chocolate;
+	font-family: GothamSSm, sans-serif;
+	font-weight: 700;
+	position: absolute;
+	left: 100px;
+	margin-top: -25px;
+}
+
+#steps {
+	display:inline-block;
+	width:70%;
+	margin-top:3vw;
+	font-size:1.3vw;
+}
+
+.descr i{
+	display: inline-block;
+	padding-right: 50px;
+	margin-left: 50px;
+	font-size: 2.5em;
+	margin-top: 15px;
+	margin-bottom: 2px;
+}
+
+#more-works{
+   margin : auto;
+   display: block;
+   font-family: "GothamSSm", sans-serif;
+   font-size: 12px;
+   padding: 10px 20px;
+   background-color: transparent;
+   border: 2px solid;
+   font-weight: 700;
+   margin-bottom: 80px;
+   line-height: 26px;
+   text-transform: uppercase;
+   transition: all 0.3s ease-in-out;
+   margin-top: 60px;
+}
+
+div.round{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+div.round input{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	font-size: 25px;
+	color: black;
+	left: 3px;
+	top: 50px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	border: none; /*border mise par défaut*/
+	background: none;
+	outline: none;
+	
+}
+
+div.round canvas{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#contact-button{
+	height: 50px;	
+	width: 150px;
+	position: relative;
+	top: -80px;
+	left: 40%;
+	font-family: fantasy;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	overflow: hidden;
+}
+
+#contact-button:before{
+	content: "CONTACT ME";
+	height: 50px;
+	width: 150px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+	transition: all .3s;
+}
+
+#contact-button:after{
+	content: '';
+	height: 50px;
+	width: 150px;
+	position: absolute;
+	box-shadow: inset 0px 0px 0px 2px black;
+	top: calc(100% - 2px);
+	left: 0;
+	transition: all .3s ease-in-out;
+}
+
+#icon{
+	color: black;
+	height: 52px;
+	width: 50px;
+	font-size: 35px;
+	position: absolute;
+	top: calc(100% - 6px);
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1;
+	transition: all .3s ease-in-out; 
+}
+
+.fa-lg{
+	font-size: 0.7em !important;
+}
+
+#contact-button:hover{
+	cursor: pointer;
+}
+
+#contact-button:hover:before{
+	transform: translateY(-50px);
+}
+
+#contact-button:hover:after{
+	top: 0%;
+}
+
+#contact-button:hover #icon{
+	transform: translate(-50%,calc(-100% + 2px));
+}
+
+
+#download-button{
+	height: 50px;	
+	width: 150px;
+	position: relative;
+	top: -130px;
+	left: 60%;
+	font-family: fantasy;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	overflow: hidden;
+}
+
+#download-button:before{
+	content: "MY CV";
+	height: 50px;
+	width: 150px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+	transition: all .3s;
+}
+
+#download-button:after{
+	content: '';
+	height: 50px;
+	width: 150px;
+	position: absolute;
+	box-shadow: inset 0px 0px 0px 2px black;
+	top: calc(100% - 2px);
+	left: 0;
+	transition: all .3s ease-in-out;
+}
+
+#download-button:hover{
+	cursor: pointer;
+}
+
+#download-button:hover:before{
+	transform: translateY(-50px);
+}
+
+#download-button:hover:after{
+	top: 0%;
+}
+
+#download-button:hover #icon{
+	transform: translate(-50%,calc(-100% + 2px));
+}
+
+footer{
+	background-color: #353535;
+	width: 100%;
+	height: 80px;
+}
+
+footer p{
+	text-align: center;
+	color: white;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#reference1, #reference2{
+	margin-bottom: 50px;
+	width: 520px;
+}
